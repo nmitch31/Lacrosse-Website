@@ -6,100 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta author="Nicholas Mitchell" />
     <title>The New Lacrosse</title>
-    <style>
-      .menu {
-        position: absolute;
-        right: 10px;
-      }
-      .page-container {
-        display: flex;
-        justify-content: space-between;
-      }
-      a {
-        text-decoration: none;
-        color: black;
-      }
-      .content-container {
-        display: grid;
-        grid-template-columns: 70% 30%;
-        grid-template-areas:
-          "video tweets"
-          "standings tweets";
-      }
-      .z {
-        background-color: lightgray;
-      }
-      .sidebar {
-        grid-area: tweets;
-      }
-      .standings {
-        grid-area: standings;
-      }
-      .video {
-        grid-area: video;
-      }
-      .footer-container {
-        display: flex;
-        justify-content: space-between;
-        background-color: aqua;
-      }
-body, div{    margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.item{
-    margin: 10px;
-}
-      .blob{
-        text-align: center;
-      width: 90px;
-      background-color: aqua;
-      font-size: 18px;
-      border-radius: 30px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 40px;
-      padding-right: 40px;
-      font-weight: bold;
-      margin-right: 30px;
-      margin-bottom: 10px;
-      }
-      .blob2{
-        text-align: center;
-        font-size: 15px;
-      background-color: lightgray;
-      width: 80px;
-      border-radius: 20px;
-      font-weight: bold;
-      margin: 10px;
-      }
-      .header-container{
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .a{
-        padding-top: 5px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <div class="z">
-    <div class="header-container">
-        <img src="images/sticks.png" height="35" alt="sticks" width="35" />
-        <span style="background-color: aqua"
-          >Lacrosse - America's First Sport</span
+      <div class="header-container">
+        <a href="index.html">
+          <img src="images/sticks.png" height="35" alt="sticks" width="35" title="Sticks" />
+          <span style="background-color: aqua"
+            >Lacrosse - America's First Sport</span
+          ></a
         >
-        <img class="menu" src="images/menu.png" alt="menu" height="40" />
+      </div>
+      <div class="page-container">
+        <div class="blob"><a href="evolution.html">The Evolution</a></div>
+        <div class="blob"><a href="rules.html">The Rules</a></div>
+        <div class="blob"><a href="stick.html">The Stick</a></div>
+      </div>
     </div>
-    <div class="page-container">
-      <div class="blob"><a href="creation.html">The Creation</a></div>
-      <div class="blob"><a href="evolution.html">The Evolution</a></div>
-      <div class="blob"><a href="rules.html">The Rules</a></div>
-      <div class="blob"><a href="stick.html">The Stick</a></div>
-      <div class="blob"><a href="technology.html">The Technology</a></div>
-    </div>
-</div>
     <div class="content-container">
       <div class="video item">
         <a
@@ -123,6 +51,7 @@ body, div{    margin: 0;
             alt="standings"
             width="1000"
             height="500"
+            title="Standings"
           />
         </a>
       </div>
@@ -142,22 +71,19 @@ body, div{    margin: 0;
     </div>
     <div class="footer-container">
       <div>
-        <img src="images/copyright.png" alt="copyright" height="20" />
-         Nicholas Mitchell
+        <img src="images/copyright.png" alt="copyright" height="20" title="copyright"/>
+        Nicholas Mitchell
       </div>
-      <div class="blob2 a"><a href="contact.html">contact</a></div>
-      <div class="blob2"><a href="related.html">related links</a></div>
-      <div class="blob2 a"><a href="donate.html">donate</a></div>
+      <div class="blob2"><a href="contact.html">contact</a></div>
+      <div class="blob2"><a href="donate.html">donate</a></div>
+      <div class="blob2"><a href="sitemap.html">sitemap</a></div>
     </div>
   </body>
 </html>
 
 <!-- Use of a table.
-Use of a form.
 Images are defined using both alt and title.
 Sitemap page (see sample site map at Apple Site Map).
-Contact page with a feedback form.
 At least 3 content pages that are completed with informative and relevant content.
-Navigation bar that is located in the same place on each page.
 Links to the sitemap page and the contact/feedback page available from the navigation bar or from links at the bottom of the page
  -->

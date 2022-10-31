@@ -1,0 +1,90 @@
+  .page-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .content-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+      "video tweets"
+      "standings tweets";
+      margin: 20px;
+  }
+  .z {
+    background-color: lightgray;
+  }
+  .sidebar {
+    grid-area: tweets;
+  }
+  .standings {
+    grid-area: standings;
+  }
+  .video {
+    grid-area: video;
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+  }
+  body,
+  div {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .item {
+    margin: 10px;
+  }
+  .blob {
+    text-align: center;
+    width: 90px;
+    background-color: aqua;
+    font-size: 18px;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  .blob2 {
+    text-align: center;
+    font-size: 15px;
+    background-color: lightgray;
+    width: 80px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 10px;
+  }
+  .header-container {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .form{
+    background-color: lightgray;
+  }
+  .contactspacing{
+    height: 330px;
+  }
+  .rules-item{
+background-color: lightgray;
+width: 800px;
+margin-top: 10px;
+margin-left: auto;
+margin-right: auto;
+  }
+  .arules{
+text-decoration: underline;
+color: blue;
+  }
+.rules-iframe{
+    margin-left: 10px;
+}

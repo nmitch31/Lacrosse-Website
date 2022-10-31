@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta author="Nicholas Mitchell" />
-    <title>Contact Me</title>
+    <title>The New Lacrosse</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      .link {
+        text-decoration: underline;
+        color: blue;
+      }
+      .height {
+        height: 530px;
+      }
+    </style>
   </head>
   <body>
     <div class="z">
@@ -28,45 +37,23 @@
         <div class="blob"><a href="stick.html">The Stick</a></div>
       </div>
     </div>
-    <div class="content-container form">
-      <form action="mailto: nmitchell1@babson.edu" method="get">
-        <div class="form item">
-          <label for="input-name">Name:</label>
-          <input
-            type="text"
-            placeholder="anonymous"
-            size="30"
-            id="input-name"
-            name="name"
-          />
-        </div>
-        <div class="item">
-          How did you come across this site?
-          <label><input type="radio" name="land" value="Search" />Search</label>
-          <label
-            ><input type="radio" name="land" value="From WebTech Class" />From
-            WebTech Class</label
-          >
-          <label
-            ><input type="radio" name="land" value="Randomly" />Randomly</label
-          >
-        </div>
-        <div class="item">
-          <label for="comment">Leave a comment</label>
-        </div>
-        <div class="item">
-          <textarea
-            name="reply"
-            id="reply"
-            cols="30"
-            rows="10"
-            placeholder="Enter your comment here..."
-          ></textarea>
-        </div>
-        <button type="submit">submit</button>
-      </form>
+    <div>
+      <ul>
+        <li><a class="link" href="index.html">Homepage</a></li>
+        <ul>
+          <li>
+            <a class="link" href="evolution.html">The Evolution of Lacrosse</a>
+          </li>
+          <li><a class="link" href="stick.html">The Lacrosse Stick</a></li>
+          <li><a class="link" href="rules.html">The Rules of Lacrosse</a></li>
+        </ul>
+      </ul>
+      <ul>
+        <li><a class="link" href="contact.html">Contact</a></li>
+        <li><a class="link" href="donate.html">Donate</a></li>
+      </ul>
+      <div class="height"></div>
     </div>
-    <div class="contactspacing"></div>
     <div class="footer-container">
       <div>
         <img src="images/copyright.png" alt="copyright" height="20" />
