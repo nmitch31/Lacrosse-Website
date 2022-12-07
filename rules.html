@@ -16,6 +16,8 @@
       .container {
         background-color: white;
         margin: 30px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
       }
       .content-container-rules {
         padding: 50px;
@@ -37,6 +39,31 @@
         margin-right: auto;
         font-weight: bold;
         font-size: 20px;
+      }
+      @media screen and (max-width: 500px) {
+        .container {
+          margin: auto;
+        }
+        .content-container-rules {
+          padding: 5px;
+        }
+        .rules-item {
+          width: 80px;
+          margin-top: 2px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .rules-item-1 {
+          width: 80px;
+          margin-top: 2px;
+          margin-left: auto;
+          margin-right: auto;
+          font-weight: bold;
+        }
+      }
+      #quote{
+        margin-left:auto ;
+        margin-right: auto;
       }
     </style>
   </head>
@@ -64,6 +91,7 @@
     <div class="container">
       <div class="content-container-rules">
         <div>
+          <div id="quote" class="rules-item-1">quote</div>
           <div class="rules-item-1">The Rules of Lacrosse</div>
           <div class="rules-item">
             The sport of men's lacrosse is played on two feet. Each player has
@@ -156,5 +184,25 @@
       <div class="blob2"><a class="white" href="donate.html">donate</a></div>
       <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
     </div>
+    <script>
+      writeRandomQuote = function () {
+        var quotes = new Array();
+        quotes[0] = "If you train hard, you'll not only be hard, you'll be hard to beat. - Herschel Walker";
+        quotes[1] =
+          "TIME. ROOM. BULLSEYE. - Paul Carcaterra";
+        quotes[2] =
+          "Right down main street! - Quint Kessenich";
+        quotes[3] =
+          "Lacrosse is probably the best sport I ever played. - Jim Brown";
+        quotes[4] = 
+        "In another 10 years, lacrosse will be what everybody's kids are playing. - Gary Husmann"
+        var rand = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[rand];
+        setTimeout(writeRandomQuote, 3000);
+      };
+      window.onload = function () {
+        writeRandomQuote();
+      };
+    </script>
   </body>
 </html>
