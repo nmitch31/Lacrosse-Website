@@ -7,17 +7,17 @@
     <meta author="Nicholas Mitchell" />
     <title>The New Lacrosse</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="images/sticks.png" />
+    <link rel="icon" type="apple-touch-icon" href="images/sticks.png" />
     <style>
+      .c-container {
+      }
+      .cont-item {
+        margin: 20px;
+      }
       .link {
         text-decoration: underline;
         color: blue;
-      }
-      .height {
-        height: 638px;
       }
     </style>
   </head>
@@ -26,7 +26,12 @@
       <div class="header-container">
         <a href="index.html">
           <img src="images/sticks.png" height="35" alt="sticks" width="35" />
-          <span style="background-color: rgb(45, 161, 224)"
+          <span
+            style="
+              background-color: rgb(0, 81, 255);
+              padding: 5px;
+              border-radius: 10px;
+            "
             >Lacrosse - America's First Sport</span
           ></a
         >
@@ -37,15 +42,56 @@
         <div class="blob"><a href="stick.html">The Stick</a></div>
       </div>
     </div>
-    <div>
-      <ul>
-        <li>
-          <a class="link" href="https://www.harlemlacrosse.org/donate"
-            >Harlem Lacrosse Donation Page</a
-          >
-        </li>
-      </ul>
-      <div class="height"></div>
+    <div class="c-container">
+      <div class="cont-item">
+        "Harlem Lacrosse is a school-based non-profit organization that changes
+        the life trajectories of youth through daily wrap-around academic
+        support, mentoring, leadership training, college readiness career
+        exploration, admissions counseling and lacrosse instruction. Our Program
+        Directors maintain a daily presence in the schools and in the lives of
+        the students we serve in order to build their confidence and activate
+        the skill sets to help them reach their full personal potential.""
+      </div>
+      <div class="cont-item">
+        I personally have had the opportunity to work with Harlem Lacrosse since
+        2016, my freshman year of high school. I've gotten to spend time as an
+        instructor, coaching kids ages 8-14 in both New York and Boston. I spent
+        time getting to know the kids, forming relationships and encouraging
+        them to work hard on and off the field. My high school lacrosse program,
+        Lincoln-Sudbury (MA) was highly involved in the program. Luckily for me,
+        I have been able to continue working with the program while I study at
+        Babson College, as our lacrosse team is also involved. When Covid hit,
+        we were able to continue seeing the kids over Zoom, acting as tutors for
+        their schoolwork.
+      </div>
+      <div class="cont-item">
+        <ul>
+          <li>
+            <a target="_blank" class="link" href="https://www.harlemlacrosse.org"
+              >Harlem Lacrosse Home Page</a
+            >
+          </li>
+          <li>
+            <a target="_blank" class="link" href="https://www.harlemlacrosse.org/donate"
+              >Harlem Lacrosse Donation Page</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="cont-item">
+        <img id="harlem" src="images/harlem7.jpg" alt="Harlem Lacrosse" height="500px" width="700px"/>
+      </div>
+      <div class="cont-item">
+        <iframe
+          width="702"
+          height="395"
+          src="https://www.youtube.com/embed/YrHk-qSfeKw"
+          title="Harlem Lacrosse x Lincoln-Sudbury"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
     <div class="footer-container">
       <div>
@@ -55,6 +101,31 @@
       <div class="blob2"><a class="white" href="contact.html">contact</a></div>
       <div class="blob2"><a class="white" href="donate.html">donate</a></div>
       <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
-     </div>
+    </div>
+    <script>
+      const slides = [
+        "images/harlem1.jpg",
+        "images/harlem2.jpg",
+        "images/harlem3.jpg",
+        "images/harlem4.jpg",
+        "images/harlem5.jpg",
+        "images/harlem6.jpg",
+        "images/harlem7.jpg",
+      ];
+      const pic = document.getElementById("harlem");
+
+      let i = 0;
+      function slideshow() {
+        if (i == slides.length) {
+          i = 0;
+        }
+        pic.src = slides[i];
+        i++;
+        setTimeout(slideshow, 5000);
+      }
+      window.onload = function () {
+        slideshow();
+      };
+    </script>
   </body>
 </html>

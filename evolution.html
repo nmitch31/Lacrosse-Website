@@ -7,21 +7,29 @@
     <meta author="Nicholas Mitchell" />
     <title>The New Lacrosse</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="images/sticks.png" />
+    <link rel="icon" type="apple-touch-icon" href="images/sticks.png" />
     <style>
-        table{
-            margin-left: auto;
-            margin-right: auto;
-            width: 1000px;
-        }
-        td{
-            border: 1px solid grey;
-            vertical-align: center;
-        }
-
+      body {
+        background-color: lightsteelblue;
+      }
+      table {
+        width: 850px;
+        margin: auto;
+        background-color: lightskyblue;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      td {
+        border: 1px solid black;
+        background-color: white;
+      }
+      .align {
+        vertical-align: center;
+        text-align: center;
+      }
+      .bold {
+        margin: auto;
+      }
     </style>
   </head>
   <body>
@@ -29,7 +37,12 @@
       <div class="header-container">
         <a href="index.html">
           <img src="images/sticks.png" height="35" alt="sticks" width="35" />
-          <span style="background-color: rgb(45, 161, 224)"
+          <span
+            style="
+              background-color: rgb(0, 81, 255);
+              padding: 5px;
+              border-radius: 10px;
+            "
             >Lacrosse - America's First Sport</span
           ></a
         >
@@ -40,9 +53,12 @@
         <div class="blob"><a href="stick.html">The Stick</a></div>
       </div>
     </div>
-    <table>
+    <table id="table1">
       <tr>
-        <td colspan="2" class="width">
+        <td colspan="3" class="align"><button>Click here to bold text</button></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="">
           <img
             src="images/algonquian.jpg"
             alt="algonquian"
@@ -51,17 +67,19 @@
             width="600px"
           />
         </td>
-        <td rowspan="2">
+        <td rowspan="2" class="align">
           In 1000 A.D. the partially Wooden Lacrosse Stick was created. The
           Algonquian tibe was the first Native American tribe to play lacrosse
           in the St. Lawrance Valley. It was originally called stick ball.
         </td>
       </tr>
       <tr>
-        <td colspan="2">Goals would be denoted by large rocks or trees.</td>
+        <td colspan="2" class="align">
+          Goals would be denoted by large rocks or trees.
+        </td>
       </tr>
       <tr>
-        <td colspan="3">
+        <td class="align" colspan="3">
           The Native American games were large public events. They took several
           days and were played on "fields" that stretched for miles. There could
           be any number of players in the old games, said to have thousands of
@@ -69,8 +87,10 @@
           was no touching the ball with your hands.
         </td>
       </tr>
+    </table>
+    <table id="table2">
       <tr>
-        <td>
+        <td class="" colspan="1">
           <img
             src="images/jean.jpg"
             alt="Jean"
@@ -78,43 +98,47 @@
             height="200px"
           />
         </td>
-        <td colspan="2">
+        <td class="align" colspan="2">
           In the 1630s, Europeans would begin to watch Native Americans playing
           the game. Jean de Brebeuf would name it "lacrosse" in 1636.
         </td>
       </tr>
+    </table>
+    <table id="table3">
       <tr>
-        <td rowspan="2">
+        <td class="align" rowspan="2" colspan="1">
           In 1834 the Caughnawaga tribe showed people in Montreal how to make a
           lacrosse stick. This was instrumental to the growth of the sport, as
           Canada would lead to adopt lacrosse as their national sport in just
           1860.
         </td>
-        <td colspan="2">
+        <td class="align" colspan="2">
           <img
             src="images/nll.jpg"
             alt="nll"
             title="Box Lacrosse"
             height="300px"
-            width="600px"
+            width="525px"
           />
         </td>
       </tr>
       <tr>
-        <td colspan="2">
+        <td colspan="2" class="align">
           In 1930s, Box Lacrosse, the indoor version of the game, was developed
           in Canada.
         </td>
       </tr>
 
       <tr>
-        <td colspan="3">
+        <td class="align" colspan="3">
           In 1904 and 1908, lacrosse participated in the olympics, before it was
           dropped. Since then it has taken part in the World Games.
         </td>
       </tr>
+    </table>
+    <table id="table4">
       <tr>
-        <td>
+        <td class="">
           <img
             src="images/rabil.webp"
             alt="rabil"
@@ -123,13 +147,14 @@
             width="600px"
           />
         </td>
-        <td colspan="2">
+        <td class="align" colspan="">
           In 2001, the Major League Lacrosse would have their first game. In
           2018 the Premier Lacrosse League was developed and the MLL would
           eventually merge with them in 2020
         </td>
       </tr>
     </table>
+
     <div class="footer-container">
       <div>
         <img src="images/copyright.png" alt="copyright" height="20" />
@@ -139,5 +164,18 @@
       <div class="blob2"><a class="white" href="donate.html">donate</a></div>
       <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
     </div>
+    <script>
+      function enlarge() {
+        console.log("starting");
+        document.getElementById("table1").style.fontWeight = "900";
+        document.getElementById("table2").style.fontWeight = "900";
+        document.getElementById("table3").style.fontWeight = "900";
+        document.getElementById("table4").style.fontWeight = "900";
+      }
+
+      document.querySelector("button").onclick = function () {
+        enlarge();
+      };
+    </script>
   </body>
 </html>

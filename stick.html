@@ -7,20 +7,33 @@
     <meta author="Nicholas Mitchell" />
     <title>The New Lacrosse</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="images/sticks.png" />
+    <link rel="icon" type="apple-touch-icon" href="images/sticks.png" />
     <style>
       .imag {
-        margin-top: 40px;
         width: 700px;
-        margin-left: 450px;
+        margin-left: auto;
+        padding-top: 40px;
+        margin-right: auto;
       }
       .text {
         text-align: center;
         width: 700px;
-        margin-left: 450px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .button {
+        margin-left: 600px;
+        padding-bottom: 40px;
+      }
+      body {
+        background-color: lightsteelblue;
+      }
+      .marginsstick{
+        margin: 50px;
+      }
+      .whitebg{
+        background-color: white;
       }
     </style>
   </head>
@@ -29,7 +42,12 @@
       <div class="header-container">
         <a href="index.html">
           <img src="images/sticks.png" height="35" alt="sticks" width="35" />
-          <span style="background-color: rgb(45, 161, 224)"
+          <span
+            style="
+              background-color: rgb(0, 81, 255);
+              padding: 5px;
+              border-radius: 10px;
+            "
             >Lacrosse - America's First Sport</span
           ></a
         >
@@ -41,22 +59,80 @@
       </div>
     </div>
     <div class="marginsstick">
-      <div>
+      <div class="whitebg">
+      <div class="imag">
         <img
+          id="image"
           src="images/evolution.jpg"
           alt="old sticks"
           title="Wooden Sticks"
-          class="imag"
           height="500px"
+          width="700px"
         />
       </div>
-      <div class="text">
+      <div id="caption" class="text">
         The lacrosse stick is important to the game of lacrosse for more than
         just its use. It is referred to as an "extension of the body" in the
         lacrosse community. The original wooden lacrosse sticks took careful
         work to be made.
       </div>
+      <div class="button"><button>Click here to change slides</button></div>
+    </div>
+  </div>
+    <div class="footer-container">
       <div>
+        <img src="images/copyright.png" alt="copyright" height="20" />
+        Nicholas Mitchell
+      </div>
+      <div class="blob2"><a class="white" href="contact.html">contact</a></div>
+      <div class="blob2"><a class="white" href="donate.html">donate</a></div>
+      <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
+    </div>
+  </body>
+  <script>
+    const slides = [
+      "images/woodenmake.image.jpg",
+      "images/woodenstick.jpg",
+      "images/plastichead.jpg",
+      "images/metalstick.jpg",
+      "images/meshhead.jpg",
+      "images/modernsticks.jpg",
+      "images/evolution.jpg",
+    ];
+    const captions = [
+      "It requires a wood carver, steamer, and sinew. It is no easy task and takes a long time. On top of forming the wooden shaft, stringing the stick with traditional leather pockets also takes time and care.",
+      "In the 1600s, they would develop a wooden head, so that the wood is fully around the head of the stick.",
+      " It wouldn't be until 1970 when the company STX would patent the first plastic molded head, separating the shaft and the head.",
+      "The first aluminum shaft was created in 1980. Then the first metal shaft would come around 1990. Wooden shafts are still allowed and used to this day, but metal shafts are far more popular.",
+      "Mesh pockets would also be developed at this time, offering an easier alternative to stringing with traditional leather pockets.",
+      "The plastic head, mesh pocket, and metal shaft are now staples in the game. Companies like STX, Maverik, and Warrior have helped develop the technology to become what it is today.",
+      "The lacrosse stick is important to the game of lacrosse for more than just its use. It is referred to as an 'extension of the body' in the lacrosse community. The original wooden lacrosse sticks took careful work to be made.",
+    ];
+    const pic = document.getElementById("image");
+    const text = document.getElementById("caption");
+    let i = 0;
+    let x = 0;
+    function slideshow() {
+      if (i == slides.length) {
+        i = 0;
+      }
+      pic.src = slides[i];
+      i++;
+    }
+    function slideshow2() {
+      if (x == captions.length) {
+        x = 0;
+      }
+      text.innerText = captions[x];
+      x++;
+    }
+    document.querySelector("button").onclick = function () {
+      slideshow();
+      slideshow2();
+    };
+  </script>
+</html>
+<!-- <div>
         <img
           class="imag"
           src="images/woodenmake.image.jpg"
@@ -131,16 +207,4 @@
         The plastic head, mesh pocket, and metal shaft are now staples in the
         game. Companies like STX, Maverik, and Warrior have helped develop the
         technology to become what it is today.
-      </div>
-    </div>
-    <div class="footer-container">
-      <div>
-        <img src="images/copyright.png" alt="copyright" height="20" />
-        Nicholas Mitchell
-      </div>
-      <div class="blob2"><a class="white" href="contact.html">contact</a></div>
-      <div class="blob2"><a class="white" href="donate.html">donate</a></div>
-      <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
-    </div>
-  </body>
-</html>
+      </div> -->

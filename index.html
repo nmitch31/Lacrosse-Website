@@ -7,17 +7,35 @@
     <meta author="Nicholas Mitchell" />
     <title>The New Lacrosse</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="images/sticks.png" />
+    <link rel="icon" type="apple-touch-icon" href="images/sticks.png" />
+  <style>
+    #caption{
+      font-size: 25px;
+      font-weight: bold;
+    }
+    body{
+      background-color: lightsteelblue;
+    }
+  </style>
   </head>
   <body>
     <div class="z">
       <div class="header-container">
         <a href="index.html">
-          <img src="images/sticks.png" height="35" alt="sticks" width="35" title="Sticks" />
-          <span style="background-color: rgb(45, 161, 224)"
+          <img
+            src="images/sticks.png"
+            height="35"
+            alt="sticks"
+            width="35"
+            title="Sticks"
+          />
+          <span
+            style="
+              background-color: rgb(0, 81, 255);
+              padding: 5px;
+              border-radius: 10px;
+            "
             >Lacrosse - America's First Sport</span
           ></a
         >
@@ -45,15 +63,15 @@
         </a>
       </div>
       <div class="standings item">
-        <a href="https://premierlacrosseleague.com/" target="_blank">
-          <img
-            src="images/standings.jpg"
-            alt="standings"
-            width="1000"
-            height="500"
-            title="Standings"
-          />
-        </a>
+        <div id="caption">2022 PLL Rankings</div>
+        <img
+          class="slidestandings"
+          src="images/slide1.jpg"
+          alt="standings"
+          width="1000"
+          height="500"
+          title="standings"
+        />
       </div>
       <div class="sidebar item">
         <a
@@ -71,19 +89,54 @@
     </div>
     <div class="footer-container">
       <div>
-        <img src="images/copyright.png" alt="copyright" height="20" title="copyright"/>
+        <img
+          src="images/copyright.png"
+          alt="copyright"
+          height="20"
+          title="copyright"
+        />
         Nicholas Mitchell
       </div>
       <div class="blob2"><a class="white" href="contact.html">contact</a></div>
       <div class="blob2"><a class="white" href="donate.html">donate</a></div>
       <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
     </div>
+    <script>
+      const slides = [
+        "images/slide1.jpg",
+        "images/slide2.jpg",
+        "images/slide3.jpg",
+      ];
+      const titles = [
+        "2022 PLL Rankings",
+        "2022 College Rankings",
+        "2022 High School Rankings",
+      ];
+      const pic = document.querySelector(".slidestandings");
+      const caption = document.getElementById("caption");
+
+      let i = 0;
+      let x = 0;
+      function slideshow() {
+        if (i == slides.length) {
+          i = 0;
+        }
+        pic.src = slides[i];
+        i++;
+        setTimeout(slideshow, 5000);
+      }
+      function slideshow2() {
+        if (x == titles.length) {
+          x = 0;
+        }
+        caption.innerText = titles[x];
+        x++;
+        setTimeout(slideshow2, 5000);
+      }
+      window.onload = function () {
+        slideshow();
+        slideshow2();
+      };
+    </script>
   </body>
 </html>
-
-<!-- Use of a table.
-Images are defined using both alt and title.
-Sitemap page (see sample site map at Apple Site Map).
-At least 3 content pages that are completed with informative and relevant content.
-Links to the sitemap page and the contact/feedback page available from the navigation bar or from links at the bottom of the page
- -->

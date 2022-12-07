@@ -7,13 +7,14 @@
     <meta author="Nicholas Mitchell" />
     <title>Contact Me</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="images/sticks.png" />
+    <link rel="icon" type="apple-touch-icon" href="images/sticks.png" />
     <style>
       .contactspacing {
-        height: 358px;
+        height: 335px;
+      }
+      form{
+        font-family: Courier, monospace;
       }
     </style>
   </head>
@@ -22,7 +23,12 @@
       <div class="header-container">
         <a href="index.html">
           <img src="images/sticks.png" height="35" alt="sticks" width="35" />
-          <span style="background-color: rgb(45, 161, 224)"
+          <span
+            style="
+              background-color: rgb(0, 81, 255);
+              padding: 5px;
+              border-radius: 10px;
+            "
             >Lacrosse - America's First Sport</span
           ></a
         >
@@ -34,7 +40,7 @@
       </div>
     </div>
     <div class="content-container form">
-      <form action="mailto: nmitchell1@babson.edu" method="get">
+      <form id="myform" action="mailto: nmitchell1@babson.edu" method="get">
         <div class="form item">
           <label for="input-name">Name:</label>
           <input
@@ -69,6 +75,7 @@
           ></textarea>
         </div>
         <button type="submit">submit</button>
+        <button type="reset">reset</button>
       </form>
     </div>
     <div class="contactspacing"></div>
@@ -81,5 +88,25 @@
       <div class="blob2"><a class="white" href="donate.html">donate</a></div>
       <div class="blob2"><a class="white" href="sitemap.html">sitemap</a></div>
     </div>
+    <script>
+      function validateform() {
+        let myForm = document.getElementById("myform");
+        let name = myForm.name.value;
+        let land = myForm.land.value;
+        let reply = myForm.reply.value;
+
+        if (name == "") {
+          alert("Please enter a name.");
+        } else if (land == "") {
+          alert("Please enter how you arrived here.");
+        } else if (reply == "") {
+          alert("Please enter a comment");
+        }
+      }
+
+      document.getElementById("myform").onsubmit = function () {
+        validateform();
+      };
+    </script>
   </body>
 </html>

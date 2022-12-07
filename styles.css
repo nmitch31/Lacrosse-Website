@@ -15,7 +15,8 @@ a {
   margin: 20px;
 }
 .z {
-  background-color: rgb(16, 95, 137);
+  background-color: navy;
+  border-bottom: 2px solid black;
 }
 .sidebar {
   grid-area: tweets;
@@ -29,10 +30,10 @@ a {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(45, 161, 224);
+  background-color: rgb(0, 81, 255);
+  border-top: solid 2px black;
 }
-body,
-div {
+body {
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -43,7 +44,7 @@ div {
 .blob {
   text-align: center;
   width: 90px;
-  background-color: rgb(45, 161, 224);
+  background-color: rgb(0, 81, 255);
   font-size: 18px;
   border-radius: 30px;
   padding-top: 10px;
@@ -53,11 +54,12 @@ div {
   font-weight: bold;
   margin-right: 30px;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 .blob2 {
   text-align: center;
   font-size: 15px;
-  background-color: rgb(16, 95, 137);
+  background-color: navy;
   width: 80px;
   border-radius: 20px;
   font-weight: bold;
@@ -67,23 +69,11 @@ div {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 10px;
 }
 .form {
-  background-color: rgb(16, 95, 137);
-}
-.rules-item {
-  background-color: rgb(16, 95, 137);
-  width: 800px;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.arules {
-  text-decoration: underline;
-  color: blue;
-}
-.rules-iframe {
-  margin-left: 10px;
+  background-color: lightsteelblue;
 }
 a.white {
   color: white;
